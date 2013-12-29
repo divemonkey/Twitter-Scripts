@@ -57,11 +57,11 @@ def getfriends():
     for line in response:
       stripped = line.strip()
     jsonresponse =  json.loads(stripped)
-    print jsonresponse
+    #print jsonresponse
     userlist = jsonresponse["users"]
     for user in userlist:
       users.append(user["screen_name"])
-    print jsonresponse["next_cursor_str"]
+    #print jsonresponse["next_cursor_str"]
     cursor = "cursor=" + jsonresponse["next_cursor_str"]
     call_count += 1
   for user in users:
